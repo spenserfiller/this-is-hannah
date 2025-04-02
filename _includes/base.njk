@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,17 +12,17 @@
 <body>
   <header>
     <div class="site-title">
-      <a href="/">hannah filler</a>
+      <a href="{{ '/' | url }}">hannah filler</a>
       <div class="subtitle">writer | editor | writing coach | poet</div>
     </div>
 
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/coaching">Coaching</a></li>
-        <li><a href="/essays">Essays</a></li>
-        <li><a href="/rhymes">Rhymes</a></li>
-        <li><a href="/newsletter">Newsletter</a></li>
+        <li><a href="{{ '/' | url }}">Home</a></li>
+        <li><a href="{{ '/coaching' | url }}">Coaching</a></li>
+        <li><a href="{{ '/essays' | url }}">Essays</a></li>
+        <li><a href="{{ '/rhymes' | url }}">Rhymes</a></li>
+        <li><a href="{{ '/newsletter' | url }}">Newsletter</a></li>
       </ul>
     </nav>
   </header>

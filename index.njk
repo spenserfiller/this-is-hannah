@@ -3,7 +3,7 @@ layout: base.njk
 title: Hannah Filler - Writer & Editor
 ---
 <div class="profile-container">
-  <img src="/img/pippa.png" alt="Hannah Filler" class="profile-image">
+  <img src="{{ '/img/pippa.png' | url }}" alt="Hannah Filler" class="profile-image">
   
   <div class="intro-text">
     <p>Welcome! I'm Hannah Filler, and I spend most of my time collaborating on writing projects with people from many backgrounds—engineers, CEOs, investors, nurses, lawyers, product leaders, and fellow professional writers. I have an amazing team at my side at <a href="#">www.writing.coach</a>.</p>
@@ -19,7 +19,7 @@ title: Hannah Filler - Writer & Editor
   <ul>
   {%- for post in collections.posts -%}
     <li class="post-item">
-      <a href="{{ post.url }}" class="post-link">{{ post.data.title }}</a>
+      <a href="{{ post.url | url }}" class="post-link">{{ post.data.title }}</a>
       <span class="post-date">{{ post.date | dateReadable }}</span>
     </li>
   {%- endfor -%}
