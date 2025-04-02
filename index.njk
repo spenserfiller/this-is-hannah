@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: Hannah Filler - Writer & Editor
+---
+<div class="profile-container">
+  <img src="/img/pippa.png" alt="Hannah Filler" class="profile-image">
+  
+  <div class="intro-text">
+    <p>Welcome! I'm Hannah Filler, and I spend most of my time collaborating on writing projects with people from many backgrounds—engineers, CEOs, investors, nurses, lawyers, product leaders, and fellow professional writers. I have an amazing team at my side at <a href="#">www.writing.coach</a>.</p>
+    
+    <p>Personally, my top 5 writing influences are Bob Dylan, Shakespeare, Bertrand Russell, Camille Paglia and Aristotle. Among web-based writers, I'm a longtime fan of Paul Graham, Shane Parrish and Tyler Cowen.</p>
+    
+    <p>I deliberately maintain a lightweight web presence, but I'm always happy to connect 1:1. Get in touch anytime via <a href="mailto:hannah@writing.coach">hannah@writing.coach</a>.</p>
+  </div>
+</div>
+
+<div class="posts-list">
+  <h2>Recent Essays</h2>
+  <ul>
+  {%- for post in collections.posts -%}
+    <li class="post-item">
+      <a href="{{ post.url }}" class="post-link">{{ post.data.title }}</a>
+      <span class="post-date">{{ post.date | dateReadable }}</span>
+    </li>
+  {%- endfor -%}
+  </ul>
+</div>
